@@ -1,0 +1,387 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Preptitude Interactive</title>
+      <link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.3.1.min.css">
+      <link rel="stylesheet" href="assets/css/jqm-demos.css">
+      <link rel="stylesheet"  href="css/themes/default/custom.css">
+      
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+
+      <script type="text/javascript" src="md5-min.js"></script>
+      
+      <script src="js/jquery.js"></script>
+      
+      <script src="js/jquery.mobile-1.3.1.min.js"></script>
+
+      <script src="cordova.js"></script>
+      <!-- cordova facebook plugin -->
+      <script src="cdv-plugin-fb-connect.js"></script>
+      <!-- facebook js sdk -->
+      <script src="facebook-js-sdk.js"></script>
+
+      <script type="text/javascript" src="main.js"></script>
+
+
+
+
+    </head>
+    <body>
+
+
+      <!-- Home Page -->
+      <div data-role="page" class="jqm-demos jqm-demos-home" id="basic_map">
+
+        <div data-role="header" class="jqm-header">
+         <h1 class="jqm-logo"><img src="logo.png" alt="Preptitude"></h1>
+         <!--<h1 class="jqm-logo">Preptitude Mobile</h1>-->
+       </div><!-- /header -->
+
+       <!-- Content -->
+       <div data-role="content" class="jqm-content">
+
+        <div class="jqm-home-welcome">
+          <h2><span>Welcome to Preptitude.</span></h2>
+
+          <p class="jqm-intro">Preptitude is an interactive e-learning application which can be used (on-the-go) across platforms (on any device of your choice be it mobile device or computer system). It is used to aid preppers boost their performance by simulating the exam condition for the respective tests.The app. tries to simulate real-time experience with few adjustment with an attempt to help users effectively measure their performance with the real life experience. The name preptitude is a
+            contraction of two key words which represents the basis of the app. 1st (prep-)aratory which the app does by aiding users preparation on the go with timed condition, progress review and prompt solution for correction and adjustment to help foster an effective preparatory ethic and the 2nd at(-titude-) which the app. does by pre conditioning and fine tuning test-takers attitude by giving them a sense of confidence and a positive expectation  before they take the actual test. We envisage simulating most standardize exams within africa and beyond.</p>
+
+            <p class="jqm-intro">Find out more <a href="#about" data-rel="popup" data-transition="slideup" data-position-to="window">About Preptitude</a></p>
+
+            <p class="jqm-intro"><a href="#flashcardPage" >Flash Cards</a></p>
+            <!--  <p class="jqm-intro"><small>.Preptitude also has a<a href="#cards" data-rel="popup" data-transition="slideup" data-position-to="window"> FlashCards Section</a>.</small></p> -->
+
+          </div>
+          <!--  <a href="#" id="fbLogin" data-theme="b" data-role="button" data-inline="true">Login with Facebook</a> -->
+          <!--<img src="ads1.png" >-->
+
+
+          <!-- <h2 class="jqm-home-widget">GRE/GMAT PRACTICE TESTS</h2> -->
+
+          <!-- GMAT Listview -->
+          <ul data-role="listview" id="gmatList" data-inset="true" data-theme="d" data-icon="false"  class="jqm-list jqm-home-list">
+
+            <li category="Verbal Reasoning" ><a href="#api-popup" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Verbal Reasoning</h2><p>This section contains questions to test understanding and reasoning using concepts framed in words. It aims at evaluating ability to think constructively, rather than at simple fluency or vocabulary recognition.</p></a></li>
+
+            <li category="Logical Reasoning"><a href="#api-popup" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Logical Reasoning</h2><p>This section contains questions to test the application of mathematical concepts and skills to solve real-world problems and competence in reading and using quantitative data, in understanding quantitative evidence and in applying basic quantitative skills to the solution of real-life problems.</p></a></li>
+
+            <li category="Engineering"><a href="#api-popup" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Engineering</h2><p>This section contains technical questions on engineering including Civil, Mechanical, Chemical, Electrical etc. The section aims to prepare graduates for international standard engineering tests.</p></a></li>
+
+            <li category="Computer Science"><a href="#api-popup" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Computer Science</h2><p>The section tests knowledge of computer science generally to prepare graduates for computer science aptitude tests. This section contains computer programming, networking, database administration and basic computer electronics etc .</p></a></li>
+
+            <li category="Medical"><a href="#api-popup" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Medical</h2><p>The section contains varios medical question related to Biochemistry, Microbiology, Biotechnology to help medical doctors, clinical technologists and scientists prepare for aptitude tests.</p></a></li>
+
+            <li category="General Knowledge"><a href="#api-popup" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>General Knowledge</h2><p>The sections contains general knowledge questions which include Current Affairs, Leisure, Geography. This bascially tests </p></a></li>
+
+            <li category="Banking and Finance"><a href="#api-popup" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Banking and Finance</h2><p>This section tests your knowledge of of funds management, or the allocation of assets and liabilities over time under conditions of certainty and uncertainty</p></a></li>
+          </ul><!-- GMAT Listview End-->
+
+          <!--<img src="ads.png" >-->
+          <!-- ICAN -->
+          <h2 class="jqm-home-widget">ICAN PRACTICE TESTS</h2>
+
+          <p class="jqm-intro">This section aids prospective ICAN exam takers have a preview of what to expect on the day of exam. As u will see, the exam model is perfectively scaled down to assume exact testing experience, with few adjustments to aid learning on the go.</p>
+          
+          <!-- ICAN Listview -->
+          <ul data-role="listview" id="icanList" data-inset="true" data-theme="d" data-icon="false"  class="jqm-list ">
+
+            <li category="Foundation"><a href="#icanCourses" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Foundation</h2><p>Questions, Answers to prepare students for Foundation Level</p></a></li>
+
+            <li category="Intermediate"><a href="#icanCourses" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Intermediate</h2><p>Questions, Answers to prepare students for Intermediate Level.</p></a></li>
+
+            <li category="PE1"><a href="#icanCourses" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>PE1</h2><p>Questions, Answers to prepare students for PE1</p></a></li>
+
+            <li category="PE2"><a href="#icanCourses" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>PE2</h2><p>Questions, Answers to prepare students for PE2.</p></a></li>
+
+            <li category="PE3"><a href="#icanCourses" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>PE3</h2><p>Questions, Answers to prepare students for PE3.</p></a></li>
+
+          </ul><!-- ICAN Listview  End-->
+
+          <!-- UME Subject -->
+          <h2 class="jqm-home-widget">O'LEVEL PRACTICE TESTS</h2>
+
+          <p class="jqm-intro">This section helps secondary school student have a preview of what to expect and effectively measure their strength and weakness after studying. It has most of the exams offered in secondary school for preppers who want to take any O'level exam of their choice.</p>
+          
+          <!-- Subject Listview -->
+          <ul data-role="listview" id="subjectList" data-inset="true" data-theme="d" data-icon="false"  class="jqm-list ">
+
+            <li category="Mathematics"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Mathematics</h2><p>Questions, Answers and Solutions for O'Level Mathematics.</p></a></li>
+
+            <li category="English"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>English</h2><p>Questions, Answers and Solutions for O'Level English.</p></a></li>
+
+            <li category="Physics"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Physics</h2><p>Questions, Answers and Solutions for O'Level Physics.</p></a></li>
+
+            <li category="Chemistry"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Chemistry</h2><p>Questions, Answers and Solutions for O'Level Chemistry.</p></a></li>
+
+            <li category="Biology"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Biology</h2><p>Questions, Answers and Solutions for O'Level Biology.</p></a></li>
+
+            <li category="Government"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Government</h2><p>Questions, Answers and Solutions for O'Level Government.</p></a></li>
+
+            <li category="Commerce"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Commerce</h2><p>Questions, Answers and Solutions for O'Level Commerce.</p></a></li>
+
+            <li category="Accounts"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Accounts</h2><p>Questions, Answers and Solutions for O'Level Accounts.</p></a></li>
+
+            <li category="Literature"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Literature</h2><p>Questions, Answers and Solutions for O'Level Literature.</p></a></li>
+
+            <li category="Economics"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Economics</h2><p>Questions, Answers and Solutions for O'Level Economics.</p></a></li>
+
+            <li category="Geography"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>Geography</h2><p>Questions, Answers and Solutions for O'Level Geography.</p></a></li>
+
+            <li category="CRK"><a href="#yearList" data-rel="popup" data-transition="slideup" data-position-to="window"><h2>CRK</h2><p>Questions, Answers and Solutions for O'Level CRK.</p></a></li>
+
+          </ul><!-- Subject Listview  End-->
+
+
+          <!--Modules Popup -->
+          <div data-role="popup" id="api-popup" class="home-pop ui-content" data-theme="d" data-overlay-theme="b">
+
+            <p>Each of the module listed below are designed to test specific learning points.</p>
+
+
+            <ul data-role="listview"  data-theme="d"  id="modules"  data-icon="false"  class="jqm-list " >
+              <li category="Module 1"><a href=""><h2>Module 1</h2><p></p></a></li>
+              <li category="Module 2"><a href="examples/"><h2>Module 2</h2></a></li>
+              <li category="Module 3"><a href="faq/"><h2>Module 3</h2></a></li>
+              <li category="Module 4"><a href="faq/"><h2>Module 4</h2></a></li>
+              <li category="Module 5"><a href="faq/"><h2>Module 5</h2></a></li>
+            </ul><!--Modules Popup End-->
+          </div>
+
+          <!--Flascards Popup -->
+          <div data-role="popup" id="cards" class="home-pop ui-content" data-theme="d" data-overlay-theme="b">
+            <p>The online support centre provides more information about the application and creates an avenue to make enquiries about NTA Mobile Ads Placements.</p>
+            <ul data-role="listview"  data-theme="d"  id="flashcards"  data-icon="false"  class="jqm-list " >
+              <li category="Mathematics"><a href=""><h2>Mathematics</h2></a></li>
+              <li category="English"><a href="examples/"><h2>English</h2></a></li>
+              <li category="Biology"><a href="faq/"><h2>Biology</h2></a></li>
+              <li category="Medicine"><a href="faq/"><h2>Medicine</h2></a></li>
+              <li category="Law"><a href="faq/"><h2>Law</h2></a></li>
+            </ul><!--flashcards Popup End-->
+          </div>
+
+          <!--About Popup -->
+          <div data-role="popup" id="about" class="home-pop ui-content" data-theme="d" data-overlay-theme="b">
+
+            <p> Preptitude Mobile(Beta). Designed by Kolexinfos Interactive &#169 2013</p>
+            <p>Website : www.kolexinfos.com</p>
+            <p>Email : info@kolexinfos.com</p>
+
+          </div> <!--About Popup End-->
+
+          <!--Dynamic O'level Years Popup -->
+          <div data-role="popup" id="yearList" class="home-pop ui-content" data-theme="d" data-overlay-theme="b">
+            <p>Please select a year. The number of years would be updated periodically.</p>
+            <ul data-role="listview"  data-theme="d"  id="years"  data-icon="false"  class="jqm-list " >
+
+            </ul><!--Dynamic O'level Years Popup End-->
+          </div>
+          
+          <!--icanCourses Popup-->
+          <div data-role="popup" id="icanCourses" class="home-pop ui-content" data-theme="d" data-overlay-theme="b">
+            <p>Please select a course from the underlisted.</p>
+            <ul data-role="listview"  data-theme="d"  id="courseList"  data-icon="false"  class="jqm-list " >
+            </ul><!--icanCourses Popup End-->
+          </div>
+          
+          <!--icanYears Popup-->
+          <div data-role="popup" id="icanYears" class="home-pop ui-content" data-theme="d" data-overlay-theme="b">
+           <p>Please select a year. The number of years would be updated periodically.</p>
+           <ul data-role="listview"  data-theme="d"  id="yearsList"  data-icon="false"  class="jqm-list " >
+            <li category="Biology"><a href="faq/"><h2>Biology</h2></a></li>
+          </ul><!--icanYears Popup End-->
+        </div>
+
+
+
+      </div><!-- /content -->
+
+
+
+      <div data-role="footer" class="jqm-footer">
+
+        <!-- <p>Copyright 2013 Kolexinfos Interactive</p> -->
+
+      </div><!-- /jqm-footer -->
+
+    </div><!--Home page end -->
+
+    <!--Questions Page -->
+    <div data-role="page" id="question" data-position="fixed"  >
+     <div data-role="header" class="jqm-header">
+       <!-- <h1 class="jqm-logo">Preptitude</h1> -->
+       <h1 class="jqm-logo"><a href="#basic_map"><img src="logo.png" alt="Preptitude"></a></h1>
+
+     </div><!-- /header -->
+
+
+
+    <!-- <div data-role="header"> 
+    <a data-icon="home" id="home">Home</a>   -->
+    <!--Menu -->  
+       <!-- <a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-icon="gear" data-theme="e">Menu</a>
+        <div data-role="popup" id="popupMenu" data-theme="b">
+          <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+              <li data-role="list-divider" data-theme="e">Choose an action</li>
+              <li><a id="home">Go Home</a></li>
+              <li><a id="timer">View Time</a></li>
+              <li><a href="#modulePage">Select Another Module</a></li>
+              
+          </ul>
+         </div> 
+        <h4>Preptitude</h4>
+          <a id="timer"></a> 
+         <a id="counter"></a>
+       </div>-->
+
+       <!--Content-->
+       <div data-role="content" class="jqm-list jqm-home-list " >
+
+        <div  class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;"> 
+
+          <a href="#basic_map" data-theme="b" data-icon="home" id="home"  data-role="button" data-inline="true">Home</a>
+          <a href="#" id="timer" data-theme="b" data-icon="plus"  data-role="button" data-inline="true">Time :</a>
+          <a href="#" id="counter" data-theme="b" data-icon="bars" data-role="button" data-inline="true">Question:</a>
+          <a href="#" id="subject" data-theme="e" data-icon="star" data-role="button" data-inline="true"></a>
+
+        </div> 
+
+        <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;"> 
+          <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+            <h4 id="quest"></h4>
+          </div>
+          <!--Option Buttons-->
+          <fieldset data-role="controlgroup" id="options" class="jqm-list " data-theme="b" >
+            <input type="radio" name="radio-choice-1" id="optiona" value="a"  checked="checked">
+            <label for="optiona" id="labela">.</label>
+            <input type="radio" name="radio-choice-1" id="optionb" value="b">
+            <label for="optionb">.</label>
+            <input type="radio" name="radio-choice-1" id="optionc" value="c">
+            <label for="optionc">.</label>
+            <input type="radio" name="radio-choice-1" id="optiond" value="d">
+            <label for="optiond">.</label>
+            <input type="radio" name="radio-choice-1" id="optione" value="e">
+            <label for="optione">.</label>
+          </fieldset>
+          <!--End of Option Buttons-->
+
+          <!--Navigation Buttons-->
+          <div data-role="controlgroup" data-type="horizontal" data-mini="true" id="buttoncontainer" class="jqm-list " >
+            <a  data-role="button" id="previous" data-icon="arrow-l" >Back</a>
+            <a  data-role="button" id="next"  data-icon="arrow-r" >Next</a>
+
+            <a  data-role="button"  id="submitAnswer"  data-icon="grid">Submit</a>
+            <a  data-role="button" href="#note" id="more"  data-icon="info" data-rel="popup" data-transition="slideup" data-position-to="window">Notes</a>
+            <a  data-role="button" id="finish"  data-icon="grid">Finish</a>
+
+            <a  data-role="button" id="learn"  data-icon="grid">Details</a>
+          </div><!--End of Navigation Buttons-->
+        </div>
+
+        <!--Note  Popup -->
+        <div data-role="popup" id="note" class="home-pop ui-content" data-theme="d" data-overlay-theme="b">
+         <p id='explanation'></p>
+
+       </div>
+
+       <!--Panel popup for details of each question -->    
+       <div data-role="popup" id="showDetails" data-theme="d" class="home-pop ui-content">
+         <p id="questDetails"></p>
+         <p id="answerDetails"></p>
+         <p id="explainDetails"></p>
+         <a href="#showDetails" data-role="button" data-rel="close" >Close</a> 
+       </div><!--end Panel popup for details of each question -->
+
+     </div><!--end Content-->
+
+     <div data-role="footer" class="jqm-footer">
+
+       <!--    <p>Copyright 2013 Kolexinfos Interactive</p> -->
+
+     </div><!-- /jqm-footer -->
+
+
+
+     <!--Diagram Image Popup -->
+     <div data-role="popup" id="popupMenu" data-theme="a">
+       <div data-role="popup" id="popupImage" data-theme="d">
+        <input id="questionImage" type="image">
+
+      </div>
+    </div><!--end Diagram Image Popup -->
+
+
+
+    <!--Panel popup for finished -->
+    <div data-role="panel" id="showFinish" data-display="overlay" data-dismissible="false">
+     <h4 id="correctDetails"></h4>
+     <h4 id="wrongDetails"></h4>
+     <h4 id="statusDetails"></h4>
+     <a href="#showFinish" data-role="button"  id="retake" data-rel="close" data-icon="grid" >Try Again</a>
+     <a href="#showFinish" data-role="button" id="review" data-rel="close" data-icon="grid">Review</a> 
+   </div><!-- end Panel popup for finished -->
+
+   
+   <!--popup for timer -->
+   <div data-role="popup" id="popupMenu" data-theme="a" data-dismissible="false">
+    <div data-role="popup" id="popupNew" data-theme="a" class="ui-corner-all">
+      <a id="timer"></a>
+    </div>
+  </div><!--end popup timer -->
+
+
+
+</div><!--end Question page -->
+
+
+
+
+<!--flashcard Page -->
+<div data-role="page" id="flashcardPage" data-position="fixed"  >
+ <div data-role="header" class="jqm-header">
+   <h1 class="jqm-logo"><img src="logo.png" alt="Preptitude"></h1>
+ </div><!-- /header -->
+
+
+ <!--Content-->
+ <div data-role="content" >
+  <div class="hover panel">
+        <div class="front">
+            <div class="pad">
+                <img src="http://simonlockyer.info/wp-content/themes/DOD_BLANK/images/logo-front.png" alt="logo front" />
+
+            </div>
+            
+        </div>
+        <div class="back">
+            <div class="pad">
+                <img src="http://simonlockyer.info/wp-content/themes/DOD_BLANK/images/logo-back.png" alt="logo back" />
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div> 
+
+
+
+
+<div data-role="footer" class="jqm-footer">
+
+ <!--  <p>Copyright 2013 Kolexinfos Interactive</p> -->
+
+</div><!-- /jqm-footer -->
+
+</div><!--end Content-->
+
+
+
+
+</div><!--Flshcrd Page page -->
+
+
+
+</body>
+</html>
